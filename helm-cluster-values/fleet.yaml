@@ -8,7 +8,7 @@ helm:
   # `.ClusterNamespace` as the namespace which the cluster resource exists.
   values:
     name: name-${ .ClusterName }
-    namespace: ${ .ClusterNamespace }${ uuidv4 }
+    namespace: ${ .ClusterNamespace }
     clusterLabels: ${ .ClusterLabels | toJson }
     clusterValues: ${ .ClusterValues | toJson }
     policy: ${ index .ClusterValues "policy" }
