@@ -1,0 +1,10 @@
+namespace: fleet-helm-example
+helm:
+  releaseName: guestbook
+  chart: ""
+  repo: ""
+  version: ""
+  force: false
+  timeoutSeconds: 0
+  values:
+    replicas: 2
