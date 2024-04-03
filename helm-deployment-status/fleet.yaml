@@ -1,6 +1,6 @@
 namespace: fleet-helm-example
 helm:
-  releaseName: guestbook
+  releaseName: test-display
   chart: ""
   repo: ""
   version: ""
