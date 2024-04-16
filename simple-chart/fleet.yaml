@@ -1,4 +1,4 @@
 helm:
   chart: config-chart
   values:
-    name: example-value
+    name: foo-bar-${PWD}
