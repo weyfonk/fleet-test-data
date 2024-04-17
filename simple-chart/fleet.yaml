@@ -3,4 +3,4 @@ namespace: fleet-local
 helm:
   chart: config-chart
   values:
-    name: foo-bar-$`{PWD`}
+    name: foo-bar-${`PWD`}
