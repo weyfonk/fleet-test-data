@@ -5,10 +5,12 @@ diff:
   - apiVersion: v1
     kind: ConfigMap
     name: app-config
+    namespace: bundle-diffs-example
     operations:
     - {"op":"remove", "path":"/data"}
   - apiVersion: v1
     kind: Service
     name: sleeper
+    namespace: bundle-diffs-example
     operations:
     - {"op":"remove", "path":"/spec/ports"}
