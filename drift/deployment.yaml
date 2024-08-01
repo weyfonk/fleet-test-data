@@ -15,7 +15,7 @@ spec:
         app: nginx
     spec:
       containers:
-      - name: nginx
-        image: nginx:1.14.2
+      - name: pause
+        image: k8s.gcr.io/pause
         ports:
         - containerPort: 80
