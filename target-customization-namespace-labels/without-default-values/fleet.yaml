@@ -1,0 +1,13 @@
+defaultNamespace: ns-1
+helm:
+  releaseName: simple-chart
+  chart: config-chart
+  values:
+    name: example-value
+targetCustomizations:
+  - name: custom-target
+    clusterName: local
+    namespaceLabels:
+      this.is/a: test
+    namespaceAnnotations:
+      this.is/a: test
