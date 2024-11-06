@@ -1,4 +1,4 @@
-defaultNamespace: ns-1
+defaultNamespace: no-defaults-ns-1
 helm:
   releaseName: simple-chart
   chart: config-chart
