@@ -10,4 +10,4 @@ targetCustomizations:
     namespaceLabels:
       this.is/a: test
     namespaceAnnotations:
-      this.is/a: test
+      this.is/another: test
