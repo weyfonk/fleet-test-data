@@ -10,8 +10,8 @@ helm:
     name: example-value
 targetCustomizations:
   - name: custom-target
-    clusterName: cluster-1
+    clusterName: local
     namespaceLabels:
       this.is/a: test
     namespaceAnnotations:
-      this.is/a: test
+      this.is/another: test
