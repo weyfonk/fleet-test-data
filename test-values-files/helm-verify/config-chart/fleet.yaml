@@ -1,4 +1,3 @@
 helm:
-  chart: config-chart
   valuesFiles:
     - values.yaml
