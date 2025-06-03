@@ -1,4 +1,2 @@
 url: global.fleet.clusterLabels.name
 name: global.fleet.clusterLabels.management.cattle.io/cluster-display-name
-otherConfigMap:
-  enabled: true
