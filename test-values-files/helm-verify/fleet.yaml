@@ -1,7 +1,7 @@
 helm:
   chart: config-chart
+  valuesFiles:
+    - values.yaml
   values:
     url: global.fleet.clusterLabels.name
     name: global.fleet.clusterLabels.management.cattle.io/cluster-display-name
-    otherConfigMap:
-      enabled: true
