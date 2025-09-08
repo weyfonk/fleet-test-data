@@ -10,7 +10,7 @@ spec:
   restartPolicy: Never
   containers:
   - name: test
-    image: busybox:1.35
+    image: registry.suse.com/bci/bci-base:15.7
     command:
     - /bin/sh
     - -c
