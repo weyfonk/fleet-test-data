@@ -20,9 +20,9 @@ spec:
       
       out="$(curl 10.43.9.178/healthz)"
       if [ "${out#404}" = "$out" ]; then
-        echo "✓ Application reports healthy status"
-        exit 0
-      else
         echo "ERROR: Could not retrieve health response"
         exit 1
+      else
+        echo "✓ Application reports healthy status"
+        exit 0
       fi
