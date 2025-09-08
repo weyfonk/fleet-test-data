@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "nginx-post-test-health"
+  annotations:
+    "helm.sh/hook": post-install
+    "helm.sh/hook-weight": "1"
+    "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
+spec:
+  restartPolicy: Never
+  containers:
+  - name: test
+    image: busybox:1.35
+    command:
+    - /bin/sh
+    - -c
+    - |
+      set -e
+      echo "Testing nginx health..."
+      
+      out="$(curl 10.43.9.178/healthz)"
+      if [ "${out#404}" = "$out" ]; then
+        echo "✓ Application reports healthy status"
+        exit 0
+      else
+        echo "ERROR: Could not retrieve health response"
+        exit 1
+      fi
