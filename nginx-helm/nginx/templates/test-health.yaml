@@ -18,7 +18,7 @@ spec:
       set -e
       echo "Testing nginx health..."
       
-      out="$(curl 10.43.9.178/healthz)"
+      out="$(curl nginx-service.default.svc.cluster.local:8080/healthz)"
       if [ "${out#404}" = "$out" ]; then
         echo "ERROR: Could not retrieve health response"
         exit 1
