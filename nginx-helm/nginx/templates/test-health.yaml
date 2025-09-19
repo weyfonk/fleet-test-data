@@ -18,7 +18,7 @@ spec:
       set -e
       echo "Testing nginx health..."
       
-      curl -v nginx-service.default.svc.cluster.local:8080 2>&1 | grep '200 OK'
+      curl -v nginx-service.default.svc.cluster.local:8080/missing-file 2>&1 | grep '200 OK'
       if [ $? -eq  0 ]; then
         echo "✓ Application reports healthy status"
         exit 0
