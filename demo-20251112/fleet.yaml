@@ -11,12 +11,22 @@ targetCustomizations:
         location: HQ
         port: 8080
 
-  - name: store1
+  - name: za
     clusterSelector:
       matchLabels:
-        env: test
+        location: za
     helm:
       values:
-        location: Durban
+        location: 'South Africa'
         port: 8081
+
+
+  - name: australia
+    clusterSelector:
+      matchLabels:
+        location: aus
+    helm:
+      values:
+        location: 'Australia'
+        port: 8082
 
