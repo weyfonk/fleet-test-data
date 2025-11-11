@@ -1,0 +1,19 @@
+targetCustomizations:
+  - name: hq
+    clusterSelector:
+      matchLabels:
+        name: local
+    helm:
+      values:
+        location: HQ
+        port: 8080
+
+  - name: store1
+    clusterSelector:
+      matchLabels:
+        env: test
+    helm:
+      values:
+        location: Durban
+        port: 8081
+
