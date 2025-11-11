@@ -1,3 +1,6 @@
+helm:
+  chart: nginx-chart
+
 targetCustomizations:
   - name: hq
     clusterSelector:
