@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-contents
+data:
+  index.html: |
+    <html>
+      <head>
+        <title>Welcome to {{.Values.location}}!</title>
+      </head>
+      <body>
+        <p>Welcome to your {{.Values.location}} site!</p>
+      </body>
+    </html>
