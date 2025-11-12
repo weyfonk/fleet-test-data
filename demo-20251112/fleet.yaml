@@ -18,7 +18,7 @@ targetCustomizations:
     helm:
       values:
         location: 'South Africa'
-        port: 8081
+        port: -32
 
 
   - name: australia
