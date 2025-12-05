@@ -5,3 +5,4 @@ metadata:
 data:
   test: "value123"
   name: {{ .Values.name }}
+  ip: {{ (lookup "v1" "Service" "kube-system" "traefik").status.loadBalancer.ingress[0].ip }}
