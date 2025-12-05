@@ -1,5 +1,5 @@
 helm:
   chart: config-chart
   values:
-    name: example-value
+    name: "{{ (lookup "v1" "Service" "kube-system" "traefik").status.loadBalancer.ingress[0].ip }}"
   takeOwnership: true
