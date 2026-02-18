@@ -1,10 +1,2 @@
 defaultNamespace: simple-example
-diff:
-  comparePatches:
-  - apiVersion: v1
-    kind: ConfigMap
-    name: simple-config
-    namespace: simple-example
-    operations:
-    - op: remove
-      path: /data/test
+
